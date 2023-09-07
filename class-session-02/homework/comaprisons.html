@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=h1, initial-scale=1.0">
+  <title>Getting Started</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <style>
+    body { 
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const original = 'chris';
+  const clone = 'CHRIS';
+
+  console.group('Strings');
+    console.log(original == 'chris'); //true
+    console.log(original == clone); //false
+    console.log(original == clone.toLowerCase()); //true
+  console.groupEnd();
+
+  const num1 = 10;
+  const num2 = '10';
+  
+  console.group('Numbers');
+    console.log(num1 == num2); //true -something about coercion
+    console.log(num1 === num2);//false
+    console.log(num1 != num2); //false (coercion)
+    console.log(num1 !== num2); //true
+  console.groupEnd();
+
+  let what; //undefined
+  let thing= null;
+  console.group('Booleans');
+    console.log(Boolean(what));
+    console.log(Boolean(thing));
+    console.log(Boolean(num1));
+  console.groupEnd();
+
+  const firstArr = [1, 2, 3];
+  const secondArr = [1, 2, 3];
+  const firstObj = { color: 'red'};
+  const secondObj = { color: 'red'};
+
+  console.group('Objects and Arrays');
+    console.log(firstArr ==secondArr);
+    console.log(firstObj ==secondObj);
+
+
+  console.groupEnd();
+
+  console.group('And Or');
+    console.log(Boolean('blah') && Boolean('thing')); //true
+    console.log(Boolean('blah') && Boolean('')); 
+    console.log(Boolean('blah') || Boolean('')); 
+    console.log(Boolean('') || Boolean('')); 
+
+  console.groupEnd();
+
+  </script>
+</body>
+</html>

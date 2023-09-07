@@ -1,0 +1,16 @@
+header {
+  background: plum;
+  padding: 2em;
+}
+
+/* How to center text and these margins seem messed up*/
+
+nav h1 {
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  list-style-type:none;
+  align-items:center;
+  justify-content: space-between;
+}

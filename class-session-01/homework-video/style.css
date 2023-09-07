@@ -1,0 +1,139 @@
+html, body {
+ height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.column {
+  flex: 1 0 auto;
+  float: left;
+}
+
+.sidebar{
+  width: 25%;
+}
+
+.main-content{
+  width: 50%;
+}
+.container{
+text-align: center;
+display: flex;
+flex-wrap: wrap;
+gap: 2em;
+}
+
+.container-cards{
+  display: flex;
+  padding: 28px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container-cards img {
+  width:100%;
+}
+.card {
+  max-width: 33%;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px #000;
+  padding: 20px;
+  transition: background 1s;
+  animation: slideFromLeft 1s forwards;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.card:hover{
+  background: grey;
+  opacity: 70%;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+@keyframes slideFromLeft{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card:nth-child(1){
+  animation-delay: 0.3s;
+}
+.card:nth-child(2){
+  animation-delay: 0.6s;
+}
+.card:nth-child(3){
+  animation-delay: 0.9s;
+}
+
+.card-image{
+  position: relative;
+}
+
+.card-title{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  color: #eee;
+  z-index: 10;
+}
+
+.overlay{
+  background: black;
+  opacity: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    }
+/*media query is working but card spacing is not-FIXED cascading order is important.
+I think I'm missing some of his size media queries...*/
+
+.footer {
+  flex-shrink: 0;
+  
+}
+@media screen and (max-width: 768px) {
+  .column,
+  .sidebar,
+  .main-content {
+    float: none;
+    width: 100%;
+  }
+
+  .sidebar{
+    display: none;
+  }
+  
+  .card {
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    max-width: 100%;
+  }
+  
+}
+
+@media screen and (min-width: 768px){
+  .card{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

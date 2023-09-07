@@ -1,0 +1,24 @@
+
+@media screen and (max-width: 600px){
+  p {
+    color: blueviolet;
+  }
+}
+
+.content {
+  background: yellow;
+}
+
+.content-paragraph {
+  position:relative;
+  top: 50px;
+  background: lightpink;
+}
+
+.container .row {
+  padding: 10px;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid black;
+  margin: 10px;
+}
