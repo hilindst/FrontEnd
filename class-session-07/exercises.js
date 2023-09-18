@@ -10,10 +10,13 @@ class Subject {
     console.log(this.observers);
   }
   removeObserver(observer) {
-    this.observers = this.observers.filter(observer => observer !== observer);
+    this.observers = this.observers.filter(arr => arr !== observer);
+		console.log("Observer removed!");
+		console.log(this.observers);
   }
   notifyObserver() {
     this.observers.forEach((observer) => observer.update());
+		console.log("Notified observers!");
   }
 }
 
@@ -31,6 +34,7 @@ newSubject.addObserver(observer2);
 newSubject.addObserver(observer3);
 newSubject.notifyObserver();
 newSubject.removeObserver(observer2);
+
 
 //Exercise 2
 /* 
