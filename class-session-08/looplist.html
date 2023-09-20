@@ -8,7 +8,6 @@
 <body>
   <h1>List List</h1>
   <ul id="itemList"></ul>
-
   <script>
     
   const items = [
@@ -27,14 +26,8 @@
           
 
   let evenItems = items.filter((element, index) => {return index % 2 !== 0;});
-   
-  /* document.getElementById("evenItems").style.backgroundColor = '#808080'; */
-   
-    function backgroundColor() {
-      document.this.style.backgroundColor ="#808080";
-    }
 
-    evenItems.forEach(backgroundColor());
+  document.getElementById("itemList").style.backgroundColor = "#808080"; //colors the entire #id element...
 
 
   </script>
