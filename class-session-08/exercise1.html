@@ -13,10 +13,10 @@
   <script>
   myDiv.style.backgroundColor = "#ADD8E6"
     
-  const paragraphs = document.getElementsByTagName("p");
-  console.log(paragraphs);
-  console.log(paragraphs.innerText); //undefined 
- 
+  const paragraphs = document.querySelectorAll("p");
+  paragraphs.forEach((p) => {console.log(p.innerText)});
+    
+
   
 
 
