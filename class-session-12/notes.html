@@ -1,0 +1,13 @@
+<div class="row mb-3" *ngFor = "let book of myBooks'>
+  <div class="col-12">
+    <a href='#' class="list-group-item d-flex">
+      <div class="d-flex flex-column">
+      <h4 class="list-group-item-heading>{{book.title}}</h4>
+      <p class="list-group-item-text mb-0">{{book.genre}}</p>
+      </div>
+    <div>
+     <img src="{{book.imagePath}}" alt="{{book.title}}"/>
+    </div>
+    </a>
+    </div>
+    </div>
